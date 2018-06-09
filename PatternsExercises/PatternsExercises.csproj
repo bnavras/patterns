@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9011546-AE78-49B0-9B5C-6E3064C4DBA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Patterns</RootNamespace>
+    <AssemblyName>Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ex00\ExternalLibs\FtpClient.cs" />
+    <Compile Include="Ex00\FileLogReader.cs" />
+    <Compile Include="Ex00\ILogReader.cs" />
+    <Compile Include="Ex00\LogImporter.cs" />
+    <Compile Include="Ex00\LogImporterClient.cs" />
+    <Compile Include="Ex01\ExternalLibs\Instagram\InstagramClient.cs" />
+    <Compile Include="Ex01\ExternalLibs\Instagram\InstagramUser.cs" />
+    <Compile Include="Ex01\ExternalLibs\Twitter\TwitterClient.cs" />
+    <Compile Include="Ex01\ExternalLibs\Twitter\TwitterUser.cs" />
+    <Compile Include="Ex01\SocialNetwork.cs" />
+    <Compile Include="Ex01\SocialNetworkUser.cs" />
+    <Compile Include="Ex01\SubscriberViewer.cs" />
+    <Compile Include="Ex02\TwitterUserService.cs" />
+    <Compile Include="Ex02\UserInfo.cs" />
+    <Compile Include="Ex02\UserService.cs" />
+    <Compile Include="Ex02\VkUser.cs" />
+    <Compile Include="Ex02\VkUserService.cs" />
+    <Compile Include="Ex05\ExternalLibs\CacheUpdater.cs" />
+    <Compile Include="Ex05\SubEx_01\DatabaseSaverClient.cs" />
+    <Compile Include="Ex05\ExternalLibs\DatabaseSaver.cs" />
+    <None Include="Ex05\SubEx_01\description.txt" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ex00\description.txt" />
+    <Content Include="Ex01\description.txt" />
+    <Content Include="Ex02\description.txt" />
+    <Compile Include="Ex05\SubEx_02\DatabaseSaverClient.cs" />
+    <Compile Include="Ex05\ExternalLibs\IDatabaseSaver.cs" />
+    <Compile Include="Ex05\ExternalLibs\MailSender.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Ex05\SubEx_02\description.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
